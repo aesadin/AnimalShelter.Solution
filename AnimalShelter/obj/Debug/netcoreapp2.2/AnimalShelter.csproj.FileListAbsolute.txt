@@ -1,0 +1,6 @@
+/Users/MamaJude/Desktop/Animal.Solution/AnimalShelter/obj/Debug/netcoreapp2.2/AnimalShelter.csprojAssemblyReference.cache
+/Users/MamaJude/Desktop/Animal.Solution/AnimalShelter/obj/Debug/netcoreapp2.2/AnimalShelter.csproj.CoreCompileInputs.cache
+/Users/MamaJude/Desktop/Animal.Solution/AnimalShelter/obj/Debug/netcoreapp2.2/AnimalShelter.RazorAssemblyInfo.cache
+/Users/MamaJude/Desktop/Animal.Solution/AnimalShelter/obj/Debug/netcoreapp2.2/AnimalShelter.RazorAssemblyInfo.cs
+/Users/MamaJude/Desktop/Animal.Solution/AnimalShelter/obj/Debug/netcoreapp2.2/AnimalShelter.AssemblyInfoInputs.cache
+/Users/MamaJude/Desktop/Animal.Solution/AnimalShelter/obj/Debug/netcoreapp2.2/AnimalShelter.AssemblyInfo.cs

@@ -1,4 +1,4 @@
-namespace YogurtFinder.Entities
+namespace AnimalShelter.Entities
 {
     public class User
     {
