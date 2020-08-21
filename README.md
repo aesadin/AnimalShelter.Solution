@@ -1,7 +1,7 @@
 **<h1 align = "center"> Animal Shelter**
 
 
-**<h1 align="center">"Please Adopt Today!"**
+**<h2 align="center">"Please Adopt Today!"**
 
 
 **<h4 align = "center">
@@ -20,7 +20,7 @@
 
 **ABOUT**
 
-The back end of an application that builds out an API for different animals in and animal shelter. The functionality implimented uses Tokenization and CORS. 
+The back end of an application that builds out an API for different animals in and animal shelter. The functionality implimented uses Tokenization. 
 
 
 ## **REQUIREMENTS**
@@ -30,11 +30,7 @@ The back end of an application that builds out an API for different animals in a
 * Install [Visual Studio Code](https://code.visualstudio.com/)
 * Install [MySql Workbench](https://www.mysql.com/products/workbench/)
 
-
-
 <br>
-
-
 
 ## **SETUP**
 
@@ -80,7 +76,7 @@ Once copied, select "Clone Repository" from within VSCode & paste the copied lin
     dotnet ef database update
     ```
 
-    3. _To make sure this migration successfully created a database, open workbench and refresh to see if the database allison_sadin is listed in the schemas _
+    3. _To make sure this migration successfully created a database, open MySQL workbench and refresh to see if the database allison_sadin is listed in the schemas_
     4. _Anytime a change is intended to be made to the database, both migration commands must be run, however a different title must be given other than "Initial" that includes a short description. An example is given below._
 
      ```js 
@@ -95,9 +91,29 @@ Once copied, select "Clone Repository" from within VSCode & paste the copied lin
   1. _In the terminal, navigate to the project directory by running the command `> cd Factory`_
   2. _Now that we are in the Sneuss directory you will run the command `> dotnet restore`_
   3. _Once the "obj" folder has initialized you will run the command `> dotnet run`_
-  4. _Go to http://localhost:5000/ in your preferred browser to use the application_
+  
 
 ![cloning](https://coding-assets.s3-us-west-2.amazonaws.com/img/dotnet-readme.gif "How to clone repo")
+
+<br>
+
+* _Using the JSON Web Token_
+<br>
+To gain authorization to use the POST, PUT and DELETE functionality of the API, you must first aunthenticate yourself through Postman.
+<br>
+  1. _Open Postman and creat a POST request by using the dropdown menu to the left of the 'Send' button. Then in the type box enter the following URL _
+   ```js 
+    http://localhost:5001/users/authenticate
+    ```
+  2. _Then select 'Body' and below that click the button for 'raw' and using the dropdown menu to the right, select 'JSON'. Then enter the following query into the Body tab and hit send_
+  ```js 
+    {
+    "username": "test",
+    "password": "test"
+    }
+    ```
+  3. _The token will be generated in the response box below. Copy and paste the given token and enter it as the token parameter in the Authorization tab_
+  4. __
 
 
 ## **PROTECTING YOUR DATA**
