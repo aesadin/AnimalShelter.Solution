@@ -4,3 +4,11 @@
 /Users/MamaJude/Desktop/Animal.Solution/AnimalShelter/obj/Debug/netcoreapp2.2/AnimalShelter.RazorAssemblyInfo.cs
 /Users/MamaJude/Desktop/Animal.Solution/AnimalShelter/obj/Debug/netcoreapp2.2/AnimalShelter.AssemblyInfoInputs.cache
 /Users/MamaJude/Desktop/Animal.Solution/AnimalShelter/obj/Debug/netcoreapp2.2/AnimalShelter.AssemblyInfo.cs
+/Users/MamaJude/Desktop/Animal.Solution/AnimalShelter/bin/Debug/netcoreapp2.2/AnimalShelter.deps.json
+/Users/MamaJude/Desktop/Animal.Solution/AnimalShelter/bin/Debug/netcoreapp2.2/AnimalShelter.runtimeconfig.json
+/Users/MamaJude/Desktop/Animal.Solution/AnimalShelter/bin/Debug/netcoreapp2.2/AnimalShelter.runtimeconfig.dev.json
+/Users/MamaJude/Desktop/Animal.Solution/AnimalShelter/bin/Debug/netcoreapp2.2/AnimalShelter.dll
+/Users/MamaJude/Desktop/Animal.Solution/AnimalShelter/bin/Debug/netcoreapp2.2/AnimalShelter.pdb
+/Users/MamaJude/Desktop/Animal.Solution/AnimalShelter/obj/Debug/netcoreapp2.2/AnimalShelter.RazorTargetAssemblyInfo.cache
+/Users/MamaJude/Desktop/Animal.Solution/AnimalShelter/obj/Debug/netcoreapp2.2/AnimalShelter.dll
+/Users/MamaJude/Desktop/Animal.Solution/AnimalShelter/obj/Debug/netcoreapp2.2/AnimalShelter.pdb

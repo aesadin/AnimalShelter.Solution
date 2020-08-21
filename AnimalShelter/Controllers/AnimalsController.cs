@@ -37,7 +37,7 @@ namespace AnimalShelter.Controllers
             }
             if (age != null)
             {
-            query = query.Where(entry => entry.Age.Contains(age));
+            query = query.Where(entry => entry.Age.Equals(age));
             }
             return query.ToList();
         }
