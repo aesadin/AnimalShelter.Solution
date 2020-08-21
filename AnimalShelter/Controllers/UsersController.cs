@@ -5,7 +5,7 @@ using AnimalShelter.Entities;
 
 namespace AnimalShelter.Controllers
 {
-//   [Authorize]
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class UsersController : ControllerBase

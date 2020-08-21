@@ -20,7 +20,7 @@
 
 **ABOUT**
 
-The back end of an application that builds out an API for different animals in and animal shelter. The functionality implimented uses Tokenization, CORS and Pagination. 
+The back end of an application that builds out an API for different animals in and animal shelter. The functionality implimented uses Tokenization and CORS. 
 
 
 ## **REQUIREMENTS**
