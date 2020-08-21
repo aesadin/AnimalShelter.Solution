@@ -22,6 +22,32 @@
 
 The back end of an application that builds out an API for different animals in and animal shelter. The functionality implimented uses Tokenization. 
 
+**ANIMALS**
+
+Access information on Animals up for adoption.
+
+**HTTP Request**
+
+  ```js 
+  GET /api/animal
+  POST /api/animal
+  GET /api/animal/{id}
+  PUT /api/animal/{id}
+  DELETE /api/animal/{id}
+  
+  ```
+
+  **PATH PARAMETERS**
+
+  | Parameters        | Type           | Default  | Description |
+  | ------------- |:-------------:| -----:| -------------:|
+  | Species      | string| null | Return matches by species. |
+  | Breed      | string      |   null | Return matches by breed. |
+  | Name | string     |   null | Return matches by name. |
+  | Age | int      |    0 | Return matches by age. |
+
+  <br>
+
 
 ## **REQUIREMENTS**
 
@@ -82,7 +108,7 @@ Once copied, select "Clone Repository" from within VSCode & paste the copied lin
      ```js 
     dotnet ef migrations add LocationTable 
     ```
-    //add download migration instructions
+    
 
 
 <br>
