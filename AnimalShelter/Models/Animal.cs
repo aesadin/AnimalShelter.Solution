@@ -12,7 +12,7 @@ namespace AnimalShelter.Models
     [Required]
     public string Breed { get; set; }
     [Required]
-    public bool Name { get; set; }
+    public string Name { get; set; }
     
     [Range(0, 500, ErrorMessage = "Must be between 1 and 500.")]
     public int Age { get; set; }

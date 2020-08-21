@@ -12,32 +12,32 @@ namespace AnimalShelter.Controllers
     [ApiController]
     public class AnimalsController : ControllerBase
     {
-        private AnimalFinderContext _db;
-        public AnimalsController(AnimalFinderContext db)
+        private AnimalShelterContext _db;
+        public AnimalsController(AnimalShelterContext db)
         {
             _db = db;
         }
         // GET api/animals
         [HttpGet]
-        public ActionResult<IEnumerable<Animal>> Get(string brand, string flavor, bool blended, string type)
+        public ActionResult<IEnumerable<Animal>> Get(string species, string breed, string name, int age)
         {
             var query = _db.Animals.AsQueryable();
 
-            if (brand != null)
+            if (species != null)
             {
-            query = query.Where(entry => entry.Brand.Contains(brand));
+            query = query.Where(entry => entry.Species.Contains(species));
             }
-            if (flavor != null)
+            if (breed != null)
             {
-            query = query.Where(entry => entry.Flavor.Contains(flavor));
+            query = query.Where(entry => entry.Breed.Contains(breed));
             }
-            if (blended)
+            if (name != null)
             {
-            query = query.Where(entry => entry.Blended == blended);
+            query = query.Where(entry => entry.Name == name);
             }
-            if (type != null)
+            if (age != null)
             {
-            query = query.Where(entry => entry.Type.Contains(type));
+            query = query.Where(entry => entry.Age.Contains(age));
             }
             return query.ToList();
         }
