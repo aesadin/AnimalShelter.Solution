@@ -1,4 +1,3 @@
-  
 using Microsoft.EntityFrameworkCore;
 
 namespace AnimalShelter.Models
@@ -21,8 +20,8 @@ namespace AnimalShelter.Models
         new Animal { AnimalId = 2, Species  = "Dog", Breed = "Terrier", Name = "Tookie", Age = 13},
         new Animal { AnimalId = 3, Species  = "Horse", Breed = "Mini", Name = "Guy", Age = 8},
         new Animal { AnimalId = 4, Species  = "Turtle", Breed = "Diamondback", Name = "Mr. Bigglesworth", Age = 57},
-        new Animal { AnimalId = 5, Species  = "Bunny", Breed = "Mini Lop", Name = "Sandy", Age = 2}
-        new Animal { AnimalId = 6, Species  = "Dog", Breed = "Goldendoodle", Name = "Celine Dion", Age = 5}
+        new Animal { AnimalId = 5, Species  = "Bunny", Breed = "Mini Lop", Name = "Sandy", Age = 2},
+        new Animal { AnimalId = 6, Species  = "Dog", Breed = "Goldendoodle", Name = "Celine Dion", Age = 5},
         new Animal { AnimalId = 7, Species  = "Cat", Breed = "Sphynx", Name = "Nood", Age = 16}
       );
     }
