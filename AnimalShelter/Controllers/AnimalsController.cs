@@ -5,9 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AnimalShelter.Models;
+using AnimalShelter.Entities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AnimalShelter.Controllers
 {
+    [Authorize(Roles = Role.Admin)]
     [Route("api/[controller]")]
     [ApiController]
     public class AnimalsController : ControllerBase
@@ -17,7 +20,8 @@ namespace AnimalShelter.Controllers
         {
             _db = db;
         }
-        // GET api/animals
+
+        [Authorize(Roles = Role.Admin)]
         [HttpGet]
         public ActionResult<IEnumerable<Animal>> Get(string species, string breed, string name, int age)
         {
@@ -42,14 +46,14 @@ namespace AnimalShelter.Controllers
             return query.ToList();
         }
 
-        // GET api/animals/5
+        [Authorize(Roles = Role.Admin)]
         [HttpGet("{id}")]
         public ActionResult<Animal> Get(int id)
         {
             return _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
         }
 
-        // POST api/animals
+        [Authorize(Roles = Role.Admin)]
         [HttpPost]
         public void Post([FromBody] Animal animal)
         {
@@ -57,7 +61,7 @@ namespace AnimalShelter.Controllers
             _db.SaveChanges();
         }
 
-        // PUT api/animals/5
+        [Authorize(Roles = Role.Admin)]
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Animal animal)
         {
@@ -66,7 +70,7 @@ namespace AnimalShelter.Controllers
             _db.SaveChanges();
         }
 
-        // DELETE api/animals/5
+        [Authorize(Roles = Role.Admin)]
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

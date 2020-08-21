@@ -5,9 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AnimalShelter.Models;
+using AnimalShelter.Entities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AnimalShelter.Controllers
 {
+    [Authorize(Roles = Role.Admin)]
     [Route("api/[controller]")]
     [ApiController]
     public class SheltersController : ControllerBase
@@ -39,14 +42,14 @@ namespace AnimalShelter.Controllers
           
         }
 
-        // GET api/shelters/5
+        [Authorize(Roles = Role.Admin)]
         [HttpGet("{id}")]
         public ActionResult<Shelter> Get(int id)
         {
             return _db.Shelters.FirstOrDefault(entry => entry.ShelterId == id);
         }
 
-        // POST api/shelters
+        [Authorize(Roles = Role.Admin)]
         [HttpPost]
         public void Post([FromBody] Shelter shelter)
         {
@@ -54,7 +57,7 @@ namespace AnimalShelter.Controllers
             _db.SaveChanges();
         }
 
-        // PUT api/shelters/5
+        [Authorize(Roles = Role.Admin)]
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Shelter shelter)
         {
@@ -63,7 +66,7 @@ namespace AnimalShelter.Controllers
             _db.SaveChanges();
         }
 
-        // DELETE api/shelters/5
+        [Authorize(Roles = Role.Admin)]
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

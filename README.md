@@ -48,6 +48,32 @@ Access information on Animals up for adoption.
 
   <br>
 
+  **SHELTERS**
+
+Access information on Shelters in your area.
+
+**HTTP Request**
+
+  ```js 
+  GET /api/shelter
+  POST /api/shelter
+  GET /api/shelter/{id}
+  PUT /api/shelter/{id}
+  DELETE /api/shelter/{id}
+  
+  ```
+
+  **PATH PARAMETERS**
+
+  | Parameters        | Type           | Default  | Description |
+  | ------------- |:-------------:| -----:| -------------:|
+  | City      | string| null | Return matches by city. |
+  | State      | string      |   null | Return matches by state. |
+  | Name | string     |   null | Return matches by name. |
+
+
+  <br>
+
 
 ## **REQUIREMENTS**
 
