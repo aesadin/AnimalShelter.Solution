@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using AnimalFinder.Models;
+using Animal.Models;
 
 namespace AnimalShelter.Controllers
 {
@@ -17,7 +17,7 @@ namespace AnimalShelter.Controllers
         {
             _db = db;
         }
-        // GET api/yogurts
+        // GET api/animals
         [HttpGet]
         public ActionResult<IEnumerable<Animal>> Get(string brand, string flavor, bool blended, string type)
         {
@@ -42,36 +42,36 @@ namespace AnimalShelter.Controllers
             return query.ToList();
         }
 
-        // GET api/yogurts/5
+        // GET api/animals/5
         [HttpGet("{id}")]
         public ActionResult<Animal> Get(int id)
         {
             return _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
         }
 
-        // POST api/yogurts
+        // POST api/animals
         [HttpPost]
-        public void Post([FromBody] Animal yogurt)
+        public void Post([FromBody] Animal animal)
         {
-            _db.Animals.Add(yogurt);
+            _db.Animals.Add(animal);
             _db.SaveChanges();
         }
 
-        // PUT api/yogurts/5
+        // PUT api/animals/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Animal yogurt)
+        public void Put(int id, [FromBody] Animal animal)
         {
-            yogurt.AnimalId = id;
-            _db.Entry(yogurt).State = EntityState.Modified;
+            animal.AnimalId = id;
+            _db.Entry(animal).State = EntityState.Modified;
             _db.SaveChanges();
         }
 
-        // DELETE api/yogurts/5
+        // DELETE api/animals/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            var yogurtToDelete = _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
-            _db.Animals.Remove(yogurtToDelete);
+            var animalToDelete = _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
+            _db.Animals.Remove(animalToDelete);
             _db.SaveChanges();
         }
     }
