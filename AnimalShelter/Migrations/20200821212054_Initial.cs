@@ -23,6 +23,21 @@ namespace AnimalShelter.Migrations
                     table.PrimaryKey("PK_Animals", x => x.AnimalId);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Shelters",
+                columns: table => new
+                {
+                    ShelterId = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    City = table.Column<string>(nullable: false),
+                    State = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Shelters", x => x.ShelterId);
+                });
+
             migrationBuilder.InsertData(
                 table: "Animals",
                 columns: new[] { "AnimalId", "Age", "Breed", "Name", "Species" },
@@ -36,12 +51,26 @@ namespace AnimalShelter.Migrations
                     { 6, 5, "Goldendoodle", "Celine Dion", "Dog" },
                     { 7, 16, "Sphynx", "Nood", "Cat" }
                 });
+
+            migrationBuilder.InsertData(
+                table: "Shelters",
+                columns: new[] { "ShelterId", "City", "Name", "State" },
+                values: new object[,]
+                {
+                    { 1, "Portland", "Pups N' Stuff", "Oregon" },
+                    { 2, "Santa Cruz", "YSPCA", "California" },
+                    { 3, "Boise", "The Animal Shelter", "Idaho" },
+                    { 4, "Troutdale", "PetCo", "Oregon" }
+                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
                 name: "Animals");
+
+            migrationBuilder.DropTable(
+                name: "Shelters");
         }
     }
 }

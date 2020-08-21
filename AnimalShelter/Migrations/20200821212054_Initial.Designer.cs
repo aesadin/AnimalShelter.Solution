@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AnimalShelter.Migrations
 {
     [DbContext(typeof(AnimalShelterContext))]
-    [Migration("20200821194156_Initial")]
+    [Migration("20200821212054_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -94,6 +94,55 @@ namespace AnimalShelter.Migrations
                             Breed = "Sphynx",
                             Name = "Nood",
                             Species = "Cat"
+                        });
+                });
+
+            modelBuilder.Entity("AnimalShelter.Models.Shelter", b =>
+                {
+                    b.Property<int>("ShelterId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("City")
+                        .IsRequired();
+
+                    b.Property<string>("Name")
+                        .IsRequired();
+
+                    b.Property<string>("State")
+                        .IsRequired();
+
+                    b.HasKey("ShelterId");
+
+                    b.ToTable("Shelters");
+
+                    b.HasData(
+                        new
+                        {
+                            ShelterId = 1,
+                            City = "Portland",
+                            Name = "Pups N' Stuff",
+                            State = "Oregon"
+                        },
+                        new
+                        {
+                            ShelterId = 2,
+                            City = "Santa Cruz",
+                            Name = "YSPCA",
+                            State = "California"
+                        },
+                        new
+                        {
+                            ShelterId = 3,
+                            City = "Boise",
+                            Name = "The Animal Shelter",
+                            State = "Idaho"
+                        },
+                        new
+                        {
+                            ShelterId = 4,
+                            City = "Troutdale",
+                            Name = "PetCo",
+                            State = "Oregon"
                         });
                 });
 #pragma warning restore 612, 618

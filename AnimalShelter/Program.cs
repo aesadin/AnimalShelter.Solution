@@ -22,7 +22,7 @@ namespace AnimalShelter
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-                .UseUrls("http://localhost:5000") //tutorial used 4000
+                // .UseUrls("http://localhost:5000") //tutorial used 4000
                 .Build();
     }
 }

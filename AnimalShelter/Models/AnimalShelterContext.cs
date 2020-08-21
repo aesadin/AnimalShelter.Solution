@@ -12,6 +12,8 @@ namespace AnimalShelter.Models
 
   public DbSet<Animal> Animals { get; set; }
 
+  public DbSet<Shelter> Shelters { get; set; }
+
   protected override void OnModelCreating(ModelBuilder builder)
   {
     builder.Entity<Animal>()
@@ -23,6 +25,14 @@ namespace AnimalShelter.Models
         new Animal { AnimalId = 5, Species  = "Bunny", Breed = "Mini Lop", Name = "Sandy", Age = 2},
         new Animal { AnimalId = 6, Species  = "Dog", Breed = "Goldendoodle", Name = "Celine Dion", Age = 5},
         new Animal { AnimalId = 7, Species  = "Cat", Breed = "Sphynx", Name = "Nood", Age = 16}
+      );
+
+      builder.Entity<Shelter>()
+      .HasData(
+        new Shelter { ShelterId = 1, City  = "Portland", State = "Oregon", Name = "Pups N' Stuff"},
+        new Shelter { ShelterId = 2, City  = "Santa Cruz", State = "California", Name = "YSPCA"},
+        new Shelter { ShelterId = 3, City  = "Boise", State = "Idaho", Name = "The Animal Shelter"},
+        new Shelter { ShelterId = 4, City  = "Troutdale", State = "Oregon", Name = "PetCo"}
       );
     }
   }
