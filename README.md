@@ -161,7 +161,8 @@ To gain authorization to use the POST, PUT and DELETE functionality of the API, 
   ```js 
     {
     "username": "test",
-    "password": "test"
+    "password": "test",
+    "role": "Admin"
     }
     ```
   3. _The token will be generated in the response box below. Copy and paste the given token and enter it as the token parameter in the Authorization tab_
