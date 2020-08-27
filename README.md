@@ -154,10 +154,18 @@ Once copied, select "Clone Repository" from within VSCode & paste the copied lin
 To gain authorization to use the POST, PUT and DELETE functionality of the API, you must first aunthenticate yourself through Postman.
 <br>
   1. _Open Postman and creat a POST request by using the dropdown menu to the left of the 'Send' button. Then in the type box enter the following URL _
+
+  <br>
+  
    ```js 
     http://localhost:5001/users/authenticate
     ```
+  <br>
+
   2. _Then select 'Body' and below that click the button for 'raw' and using the dropdown menu to the right, select 'JSON'. Then enter the following query into the Body tab and hit send_
+
+  <br>
+
     ```js 
     {
     "username": "test",
@@ -165,8 +173,10 @@ To gain authorization to use the POST, PUT and DELETE functionality of the API, 
     "role": "Admin"
     }
     ```
+
+  <br>
   3. _The token will be generated in the response box below. Copy and paste the given token and enter it as the token parameter in the Authorization tab_
-  4. __
+  
 
 
 ## **PROTECTING YOUR DATA**
