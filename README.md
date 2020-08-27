@@ -158,7 +158,7 @@ To gain authorization to use the POST, PUT and DELETE functionality of the API, 
     http://localhost:5001/users/authenticate
     ```
   2. _Then select 'Body' and below that click the button for 'raw' and using the dropdown menu to the right, select 'JSON'. Then enter the following query into the Body tab and hit send_
-  ```js 
+    ```js 
     {
     "username": "test",
     "password": "test",
