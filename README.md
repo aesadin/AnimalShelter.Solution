@@ -28,14 +28,25 @@ Access information on Animals up for adoption.
 
 **HTTP Request**
 
-  ```js 
+  ``
   GET /api/animal
+  ``
+
+  ``
   POST /api/animal
+  ``
+
+  ``
   GET /api/animal/{id}
+  ``
+
+  ``
   PUT /api/animal/{id}
+  ``
+
+  ``
   DELETE /api/animal/{id}
-  
-  ```
+  ``
 
   **PATH PARAMETERS**
 
@@ -54,14 +65,25 @@ Access information on Shelters in your area.
 
 **HTTP Request**
 
-  ```js 
+  `` 
   GET /api/shelter
+  ``
+
+  ``
   POST /api/shelter
+  ``
+
+  ``
   GET /api/shelter/{id}
+  ``
+
+  ``
   PUT /api/shelter/{id}
+  ``
+
+  ``
   DELETE /api/shelter/{id}
-  
-  ```
+  ``
 
   **PATH PARAMETERS**
 
@@ -92,9 +114,9 @@ Access information on Shelters in your area.
   3. _Click "Finish_
 
 copy this url to clone this project to your local system:
-```html
-https://github.com/aesadin/AnimalShelter.Solution.git
-```
+
+``html``
+ https://github.com/aesadin/AnimalShelter.Solution.git``
 
 <br>
 
@@ -119,21 +141,22 @@ Once copied, select "Clone Repository" from within VSCode & paste the copied lin
   * _Running Migration_
     1. _To create the initial migration folder run the following command in the terminal after navigating into `> cd Factory` _
 
-    ```js 
+    ``
     dotnet ef migrations add Initial 
-    ```
+    ``
+
     2. _Then run the following command next_
 
-    ```js
+    ``
     dotnet ef database update
-    ```
+    ``
 
     3. _To make sure this migration successfully created a database, open MySQL workbench and refresh to see if the database allison_sadin is listed in the schemas_
     4. _Anytime a change is intended to be made to the database, both migration commands must be run, however a different title must be given other than "Initial" that includes a short description. An example is given below._
 
-     ```js 
+     ``
     dotnet ef migrations add LocationTable 
-    ```
+    ``
     
 
 
@@ -155,27 +178,29 @@ To gain authorization to use the POST, PUT and DELETE functionality of the API, 
 <br>
   1. _Open Postman and creat a POST request by using the dropdown menu to the left of the 'Send' button. Then in the type box enter the following URL _
 
-  <br>
-  
-   ```js 
-    http://localhost:5001/users/authenticate
-    ```
-  <br>
+<br>
 
-  2. _Then select 'Body' and below that click the button for 'raw' and using the dropdown menu to the right, select 'JSON'. Then enter the following query into the Body tab and hit send_
+``
+http://localhost:5001/users/authenticate
+``
 
-  <br>
+<br>
 
-    ```js 
-    {
-    "username": "test",
-    "password": "test",
-    "role": "Admin"
-    }
-    ```
+2. _Then select 'Body' and below that click the button for 'raw' and using the dropdown menu to the right, select 'JSON'. Then enter the following query into the Body tab and hit send_
 
-  <br>
-  3. _The token will be generated in the response box below. Copy and paste the given token and enter it as the token parameter in the Authorization tab_
+<br>
+
+``
+{
+"username": "test",
+"password": "test",
+"role": "Admin"
+}
+``
+
+<br>
+
+3. _The token will be generated in the response box below. Copy and paste the given token and enter it as the token parameter in the Authorization tab_
   
 
 
@@ -184,15 +209,15 @@ To gain authorization to use the POST, PUT and DELETE functionality of the API, 
 #### **Step 1: From within VSCode in the root project directory, we will create a .gitignore file**
 
 # For Mac Users
-```js 
+``
 touch .gitignore 
-```
+``
 
 # For Windows Users:
 
-```js 
+``
 ni .gitignore 
-```
+``
 
 #### Step 2: commit that .gitignore file (this prevents your sensitive information from being shown to others). **⚠️DO NOT PROCEED UNTIL YOU DO!⚠️**
 
@@ -200,12 +225,13 @@ ni .gitignore
 
 #### Step 3: **To commit your .gitignore file enter the following commands**
 
-```js
+``
 git add .gitignore
-```
-```js
+``
+
+``
 git commit -m "protect data"
-```
+``
 
 #### Step 4: **Then, you need to update your username and password in the appsettings.json file.**
 
